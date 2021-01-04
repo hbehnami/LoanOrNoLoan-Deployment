@@ -32,7 +32,7 @@ function onClickedLoanOrNoLoan() {
     function (data, status) {
       console.log(data.loan_or_no_loan);
       loanornot.innerHTML =
-        "<h2>" + data.loan_or_no_loan.toString() + " 1=Yes, 0=No</h2>";
+        "<h2>" + data.loan_or_no_loan.toString() + " (1=Approved, 0=Rejected)</h2>";
       console.log(status);
     }
   );

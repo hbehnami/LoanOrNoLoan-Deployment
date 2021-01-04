@@ -31,8 +31,7 @@ function onClickedLoanOrNoLoan() {
     },
     function (data, status) {
       console.log(data.loan_or_no_loan);
-      loanornot.innerHTML =
-      "<h2>" + data.loan_or_no_loan.toString() + " Lakh</h2>";
+      loanornot.innerHTML = data.loan_or_no_loan;
       console.log(status);
     }
   );

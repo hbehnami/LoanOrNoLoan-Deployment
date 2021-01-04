@@ -31,8 +31,11 @@ function onClickedLoanOrNoLoan() {
     },
     function (data, status) {
       console.log(data.loan_or_no_loan);
-      loanornot.innerHTML =
-        "<h2>" + data.loan_or_no_loan.toString() + " (1=Approved, 0=Rejected)</h2>";
+      if (data.loan_or_no_loan == 1) {
+        loanornot.innerHTML ="<h2> Approved </h2>";
+      } else {
+        loanornot.innerHTML ="<h2> Rejected </h2>";
+      }
       console.log(status);
     }
   );

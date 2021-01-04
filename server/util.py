@@ -98,7 +98,6 @@ def load_saved_artifacts():
     if __model is None:
         with open(artifacts[0]+"/model.pkl", 'rb') as f:
             __model = pickle.load(f)
-    print(__model.predict([[4000, 2000.0, 120.0, 360.0, 1.0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0]]))
     print("loading saved artifacts...done")
 
 def get_data_columns():

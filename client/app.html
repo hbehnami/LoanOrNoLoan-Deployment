@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan or Non-Loan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!--  <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css"> --> <!-- For running locally -->
+    <script src="{{ url_for('static',filename='app.js') }}"></script>
+	<link rel="stylesheet"  href= "{{ url_for('static',filename='app.css') }}"> <!-- For integrating Flask and HTML -->
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Applicant Income</h2>
+    <input class="area"  type="email" id="app_income" class="floatLabel" name="AppIncome" value="3000">
+	<h2>Coapplicant Income</h2>
+    <input class="area"  type="email" id="coapp_income" class="floatLabel" name="CoappIncome" value="1000.0">
+	<h2>Loan Amount</h2>
+    <input class="area"  type="email" id="loan_amount" class="floatLabel" name="LoanVal" value="120.0">
+	<h2>Loan Amount Term</h2>
+    <input class="area"  type="email" id="loan_amount_term" class="floatLabel" name="LoanValTerm" value="360.0">
+	<h2>Credit History</h2>
+    <input class="area"  type="email" id="credit_hist" class="floatLabel" name="CreditHist" value="1.0">
+	</form>
+<form class="form">
+	<h2>Gender</h2>
+	<div>
+  <select class="location" name="" id="uiGenders">
+    <option value="" disabled="disabled" selected="selected">Choose a Gender</option>
+		<option>Gender_Female</option>
+        <option>Gender_Male</option>
+	    <option>Gender_Not Specified</option>
+
+  </select>
+</div>
+	<h2>Married</h2>
+	<div>
+  <select class="location" name="" id="uiMarrieds">
+    <option value="" disabled="disabled" selected="selected">Choose a Married</option>
+		<option>Married_No</option>
+        <option>Married_Not Specified</option>
+	    <option>Married_Yes</option>
+
+  </select>
+</div>
+	<h2>Dependents</h2>
+	<div>
+  <select class="location" name="" id="uiDependents">
+    <option value="" disabled="disabled" selected="selected">Choose a Dependent</option>
+		<option>Dependents_0</option>
+        <option>Dependents_1</option>
+	    <option>Dependents_2</option>
+	    <option>Dependents_3+</option>
+
+  </select>
+</div>
+	<h2>Education</h2>
+	<div>
+  <select class="location" name="" id="uiEducations">
+    <option value="" disabled="disabled" selected="selected">Choose a Education</option>
+		<option>Education_Graduate</option>
+        <option>Education_Not Graduate</option>
+
+  </select>
+</div>
+	<h2>Employment</h2>
+	<div>
+  <select class="location" name="" id="uiEmployments">
+    <option value="" disabled="disabled" selected="selected">Choose an Employment</option>
+		<option>Self_Employed_No</option>
+        <option>Self_Employed_Not Specified</option>
+	    <option>Self_Employed_Yes</option>
+
+  </select>
+</div>
+	<h2>Property</h2>
+	<div>
+  <select class="location" name="" id="uiProperties">
+    <option value="" disabled="disabled" selected="selected">Choose a Property</option>
+		<option>Property_Area_Rural</option>
+        <option>Property_Area_Semiurban</option>
+	    <option>Property_Area_Urban</option>
+
+  </select>
+</div>
+	<button class="submit" onclick="onClickedLoanOrNoLoan()" type="button">Loan Or No Loan</button>
+	<div id="uiLoanOrNoLoan" class="result">	<h2></h2> </div>
+</body>
+</html>
